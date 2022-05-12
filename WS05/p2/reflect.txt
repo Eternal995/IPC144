@@ -1,0 +1,55 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #5
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. 
+can use if or switch
+
+if:
+
+if (month == 11)
+{
+    printf("NOV");
+}
+else if (month == 12)
+{
+    printf("DEC")
+}
+
+Switch:
+
+switch (month)
+{
+    case 11:
+        printf("NOV");
+        break;
+    case 12:
+        printf("DEC");
+        break;
+}
+
+2.
+the 3 types of iteration constructs are while, do while, and for.
+
+I used the do while to validate the entered value, cause the do while loop
+will always run once before it check the while condiiton, and for validate
+the user input, we do need ask the user to enter once no matter what.
+
+3.
+For syntactic error, I go through the program once first to see if there's missing
+; or ", and check for spellings, and then try run the program once, if there's more 
+syntactic error it will show where is wrong and I can fix it.
+
+For semantic error, first run the program to see if I can get the desired answer,
+if not, then i need to go back to the code and find the constructs that suppose give
+the desired answer, and run through them by brain to see where it went wrong and fix it.

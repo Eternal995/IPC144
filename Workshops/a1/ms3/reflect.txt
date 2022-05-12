@@ -1,0 +1,63 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 3
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1.
+void sortAllAppointment(struct Appointment appoint[], const int max);
+I used this function to sort the appointment in order based on date and then time,
+it was being used in the view all appointment and view appointment by date functions
+to make sure the displayed result is in order, it is useful and since itself is very long
+in line, it saves a lot of lines by writting it seperatly.
+
+int lastAppointmentIndex(const struct Appointment* appointment, const int max)
+this function is used to find the index of last non empty record that saves an
+appointment details, this is an useful function that can be used in add appointment function 
+so the theres no empty gaps in between records, it ensures the appointment added is in the first available position.
+it also be used in the remove appointment function so that when remove an appointment that is not in the last non empty
+index, we move the last index data to the removed index and make last index data empty so we dont leave a gap in between records.
+
+void inputDate(struct Date* date)
+void inputTime(struct Time* time)
+theses two functions are used to get user input value for the date and time data. 
+it is a simple function but a lot part of the appointment section is asking for user
+input date and time so it is useful to write those in a seperate function to save space in the used function body.
+
+2.
+my addAppointment function consist of about 40 lines, I used a lot of support function in this functions, including the following:
+
+index = lastAppointmentIndex(appointment, max_app) + 1;
+pnumber = inputIntPositive();
+pindex = findPatientIndexByPatientNum(pnumber, patient, max_pet);
+inputDate(&input_date);
+inputTime(&input_time);
+
+these are all really useful function that helps make the code readable and clear.
+for example if I manually write out the find last appointment index function people who read the code might not
+know what I am trying to do there, but as the name indicated, I am trying to find the last available index to add the new appointment
+record. same as the inputDate function and inputTime function, they are not short functions and if being written directly 
+in the function body it could be confusing what people should be entering there, but with the function prewritten people will know they
+are entering date and time seperated
+
+3.
+I usually likes to finish all the work together so I dont have gaps in between and change my thinkings on different part of
+the code. so what I did first is the input file function, since they are kind of seperated from the other function as 
+they are just importing data into the function and not really involved in other function bodies so it is easier to just finish them first
+and it can help with testing the other parts when writting other functions.
+Then I started to think about the four new big functions that we need to write, the first two, view all appoinment and view
+appointment schedule clearly required a sort function that sort the entries in data in order by date and then time. So I first think
+if I can write an overall sort single number function in core.c and just do sorting for each of the year, month, day and so on. but since 
+for each sorting it required to move all the data for an index, there's no way to write such function and do it for each component of the data
+(at least not from my knowledge), thus I just did a sort all appointment function that can sort appointments with input appointments,
+and since this function is using a appointment structure and is designed specifically for the clinic system, it can only go into clinic.c.
+that's probably the biggest chanllenge I found in the way, other parts are kind of straight forward and do not require too much effort.

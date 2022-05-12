@@ -1,0 +1,36 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 2
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1.
+when naming a module, first consider its usage, the name usually indicate where are we using this module or how
+are we trying to use this module, and make the file name in lower case letters to make it consistant for cross
+platform, for example, from the file name we can know that clinic.c are functions that used for the clinic, and core.c
+include functions on some base level which could be used for other things. Making the files in the same name would not 
+make any confusion when trying to include files, if they are in different names, it could be unclear which header file is
+declaring functions in which source code file.
+
+2.
+modules are used as supplementary to the main program, so we are adding functions to the main program to make it more useful.
+for example, core.c contains functions that used for getting user input, either integer or strings, and clinic.c contains functions
+for the menu operations for the main function, so the modules have different usage and so that if we are doing another project we 
+could only need one of the modules in this application, that's why we keep it seperated.
+
+3.
+a header file(.h) is used to declare structures and function prototypes, and source code file(.c) is where the definitions of the functions declared
+in the header file goes. if you are trying to use function definitions you wrote in one .c file in another .c file, you will need
+to declare that function in the second .c file so you can use it, but if we just include the .h file associated with the .c file we can
+skip the declare part and just use the function directly. for example, we are trying to use a lot functions in core.c inside clinic.c, 
+if we dont use a header file we would need to have all declares written in the clinic.c file, instead of just do a include core.h,
+and this will get more complicated as we adding more modules, so a header file is helping with the declaration of the functions.

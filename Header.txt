@@ -1,0 +1,6 @@
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+#define _CRT_SECURE_NO_WARNINGS

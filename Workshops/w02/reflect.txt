@@ -1,0 +1,35 @@
+*****************************************************************************
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.
+The most difficult expression would be the code to determine if customer's preference align to the available product.
+for example:
+((strength == 'm' || strength == 'M') && (type1 == 'l' || type1 == 'L')) || ((strength == 'r' || strength == 'R') && (type1 == 'b' || type1 == 'B'))
+this expression determined if the coffee strength is mild while coffee type is light or the coffee strength is rich while coffee type is blend, 
+indicated by the && that you need to met both condition.
+The program will return true while at least one of the condition is met, indicated by the '||' function.
+Also it can read the input in both lowercase and uppercase letter.
+
+2.
+For example:
+strength == 'm' || strength == 'M' is determine if the coffee strength is mild, while there can only be two option to the answer (mild or rich),
+while this expression cannot apply deMorgan's Law, it can also be written as:
+strength = ! 'r' && ! 'R', which is able to apply deMorgan's Law and change the expression to:
+strength = !('r'||'R')
+
+3.
+For part1, we need to store the average product prices in a variable, and we are using the variable in various calculations and comparison in the latter part,
+but for part2, we only need to display the degree in Fahrenheit once in the table, and it never be used in the latter part, that's why we want the variable for
+average price but not the degree in Fahrenheit, it would be helpful if we can have the variable for average price rather than to write out the calculation everytime
+we are using it.

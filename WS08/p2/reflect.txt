@@ -1,0 +1,48 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #8
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.
+
+an int type occupies 4 bytes while a double type occupies 8 bytes,
+the ReportData structure contains 3 int and 6 double, so it requires 60 bytes of memory minimum.
+
+to improve passing it to function, we can use pass by address.
+
+for example:
+
+instead of
+
+void displayReportData(const struct ReportData data, const int cheapest);
+
+we can do
+
+void displayReportData(const struct ReportData* data, const int cheapest);
+and inside the function we can use the arror notation like data->sku to find the address of the specific element of the structure.
+
+2.
+we can do
+
+struct ReportData
+{
+    struct CatFoodInfo info
+    double weight_kg;
+    int weight_g;
+    double total_serving, cost_per_serving, cost_per_calories;
+};
+
+and the printf statement in displayReportData would be:
+
+printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf",
+        data.info.sku_number, data.info.price, data.info.weight, data.weight_kg, data.weight_g, data.info.calories, data.total_serving, data.cost_per_serving, data.cost_per_calories);
+

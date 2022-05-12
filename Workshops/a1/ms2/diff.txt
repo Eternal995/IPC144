@@ -1,0 +1,14 @@
+In line number 263 of your output:
+The output should be:
+Selection: 2
+           ^
+But your output is: 
+Selection: 
+            ^
+
+Unmatched character details:
+The character in column 13 is supposed to be:
+  [2] ASCII code(50)
+but you printed
+  [Empty Line] ASCII code(0)
+

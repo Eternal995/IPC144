@@ -1,0 +1,14 @@
+In line number 520 of your output:
+The output should be:
+Are you sure you want to remove this appointment (y,n): y
+                                     ^
+But your output is: 
+Are you sure you want to remove this patient record? (y/n): y
+                                     ^
+
+Unmatched character details:
+The character in column 38 is supposed to be:
+  [a] ASCII code(97)
+but you printed
+  [p] ASCII code(112)
+

@@ -1,0 +1,35 @@
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+1/2.
+I am in a group of 2 to complete this question. the work distribution is that
+Ivan is working on the View all data part and View by region part of the code,
+and I am working on the View by month and View by location name part of the code.
+The function I created are: the main menu function, the view by month header and
+body functions, the view by location name header and body functions, and for utility
+functions I created unitconvertCMtoMM, unitconvertMMtoCM, and find next empty index,
+theses utility functions are used to help writting the body functions. Overall I would
+say we are pretty much 50% and 50% split on the work cause we all doing two parts of the 
+displays.
+
+3.
+the data structures I used are Date, Location and Weather Record, they are created
+from the file reading function and they are used to store all the data read from 
+the txt file, so they can be transferred throught different functions. Then for the 
+different views, I did not created any data structures, instead I used parallel arrays,
+I think for the two types of the data I am doing, view by month and view by location name,
+there are only two element for display, so I only need to create two arrays for them,
+it is not worth it to create an extra data structure for each of the view.
+
+4.
+I dont feel too much chanllenge towards this question, most time are spent on the function body
+of the two display functions, so they should be the chanllenge part. for example, the display by
+month function, first I look at the output, I need to display 12 month, and I need to display the
+precip for those 12 month, so I created a pair of parallel array for the display. then I need to 
+fill in the data, so I created a loop to run through all data and add the precip into the corresponding
+month's data. then I figured out they are in different unit, so I created two function that can convert unit 
+back and forth so I can get the correct values. and then I just need to sort the two arrays together, and
+then I need to display them, so I need to transfer the numbered month into a character string.
+This is pretty much the whole process I overcome this problem.

@@ -1,0 +1,14 @@
+In line number 34 of your output:
+The output should be:
+ 1 |   1   |   0   |    1   |   0  |  250 |  0.551 |   1   |  65.7 | 150.3
+                                                              ^
+But your output is: 
+ 1 |   1   |   0   |    1   |   0  |  250 |  0.551 |   1   |   65.7 | 150.3
+                                                              ^
+
+Unmatched character details:
+The character in column 63 is supposed to be:
+  [6] ASCII code(54)
+but you printed
+  [Space] ASCII code(32)
+

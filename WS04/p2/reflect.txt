@@ -1,0 +1,147 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #4
+Full Name  : 
+Student ID#: 
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.
+selection is important because it allows program to run differently under different conditions,
+otherwise the program cannot make any changes even though conditions are changed.
+
+examples:
+
+a)
+    printf("How many APPLES do you need? : ");
+    scanf("%d%*c", &num_apple);
+    if (num_apple < 0)
+    {
+        printf("ERROR: Value must be 0 or more.\n");
+    }
+this requires user to enter value greater or equal to 0, otherwise the program will tell you there is an error
+
+b)
+    if (num_apple > 0)
+            {
+            ...
+            }
+this allows the program only runs the block inside if user want more than 1 apple
+
+c)
+                printf("Pick some ORANGES... how many did you pick? : ");
+                scanf("%d%*c", &num_buy);
+                if (num_buy > num_orange)
+                {
+                    printf("You picked too many... only %d more ORANGE(S) are needed.\n", num_orange);
+                }
+                else if (num_buy <= 0)
+                {
+                    printf("ERROR: You must pick at least 1!\n");
+                }
+                else if (num_buy > 0 && num_buy < num_orange)
+                {
+                    num_orange = num_orange - num_buy;
+                    printf("Looks like we still need some ORANGES...\n");
+                }
+                else if (num_buy = num_orange)
+                {
+                    num_orange = num_orange - num_buy;
+                    printf("Great, that's the oranges done!\n\n");
+                }
+this allows user to buying exact number of orange before they can go on to another product
+
+2.
+nested construct is enclosing one logic construct within another.
+
+examples:
+
+a)
+        do
+        {
+            printf("How many APPLES do you need? : ");
+            scanf("%d%*c", &num_apple);
+            if (num_apple < 0)
+            {
+                printf("ERROR: Value must be 0 or more.\n");
+            }
+        } while (num_apple < 0);
+first the do-while loop will ensure the loop is continued if number of apple is needed is less than 0
+then when number of apple is less than 0, the program will ask how many apple is the user want, if user enter
+anything less than 0, it will say there is an error and ask again, and if user enter anything greater than 0 it
+will end the loop and proceed to later part of the program.
+
+b)
+        while (num_cabbage != 0)
+
+        {
+            printf("Pick some CABBAGES... how many did you pick? : ");
+            scanf("%d%*c", &num_buy);
+            if (num_buy > num_cabbage)
+            {
+                printf("You picked too many... only %d more CABBAGE(S) are needed.\n", num_cabbage);
+            }
+            else if (num_buy <= 0)
+            {
+                printf("ERROR: You must pick at least 1!\n");
+            }
+            else if (num_buy > 0 && num_buy < num_cabbage)
+            {
+                num_cabbage = num_cabbage - num_buy;
+                printf("Looks like we still need some CABBAGES...\n");
+            }
+            else if (num_buy = num_cabbage)
+            {
+                num_cabbage = 0;
+                printf("Great, that's the cabbages done!\n\n");
+            }
+        }
+first the program will only run this block is number of cabbage is greather than 0.
+then when number of cabbage is needed is not equal to 0, the program will ask user to pick
+up some cabbages, when user pick up, if user's number is less than 0, it will opt an error say
+user need to pick at least 1; if user enter number is more than needed, it will say user cant pick
+more than needed and show how much user needed; if user pick less than needed, it will count and tell
+user more is needed; if user pick exactly needed, it will end and say number fulfilled.
+
+3.
+I think i like the while construct better.
+
+the do-while construct always need to run the sequence once before examine the condition, if you do not 
+want the initial sequence you need to do an if condition to skip it
+
+the for construct would need an intialization that the other two do not need, and it always require the changes
+while sometimes there might be no changes at all
+
+example is:
+        while (num_tomato != 0)
+        {
+            printf("Pick some TOMATOES... how many did you pick? : ");
+            scanf("%d%*c", &num_buy);
+            if (num_buy > num_tomato)
+            {
+                printf("You picked too many... only %d more TOMATO(ES) are needed.\n", num_tomato);
+            }
+            else if (num_buy <= 0)
+            {
+                printf("ERROR: You must pick at least 1!\n");
+            }
+            else if (num_buy > 0 && num_buy < num_tomato)
+            {
+                num_tomato = num_tomato - num_buy;
+                printf("Looks like we still need some TOMATOES...\n");
+            }
+            else if (num_buy = num_tomato)
+            {
+                num_tomato = 0;
+                printf("Great, that's the tomatoes done!\n\n");
+            }
+        }
+
+the do-while will run the block once and ask for pick some tomato even if number needed is 0, which is what we dont want
+
+the for loop will require changes to initialization everytime the loop is running, which is the number of tomato needed, but
+if user enter some value the needed number will not change

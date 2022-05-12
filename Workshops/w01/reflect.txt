@@ -1,0 +1,28 @@
+*****************************************************************************
+Workshop - #1 (Reflect)>
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. 
+In completing this workshop I first learned how to create and working on new project in Visual Studio,
+then from doing the codes, I learned the use of the printf funtion to print out texts, 
+how to start out a new line, how to to tab space in a line, and how to insert characters like '\', '"','%'.
+Then also I learned how to use PuTTy to connect to Matrix and submit work, 
+and how to use WinSCP to upload files onto matrix.
+
+2.
+SSH is stand for Secure Shell Protocol, it enables connection to matrix, which is an server located in Seneca.
+In this workshop the SSH client helps submit files, the way I did this is by using a SFTP to upload those files
+on to the matrix, and then use commands listed in the pdf file to submit those files.
+
+3.
+SFTP is stand for SSH File Transfer Protocal, it can access and transfer files on a server.
+I used SFTP in this workshop to upload files to matrix which is needed to do submission.
+

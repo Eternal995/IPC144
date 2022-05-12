@@ -1,0 +1,38 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #6
+Full Name : Yongda Long
+Student ID# : 172800211
+Email : ylong9@myseneca.ca
+Section : IPC144NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.
+
+printf("%3d %6d %8c %14.2lf\n", i + 1, importance[i], financing[i], cost[i]);
+is an example using parallel arrays, to link related date we need to have the array be
+same length, then we use the same index to represent the same set of data.
+
+2.
+
+It usually start with zero because when working with for loop, it will make counting easier
+since for loop also usually start with 0
+
+for example
+
+            for (i = 0; i < wish_list; i++)
+            {
+                if (importance[i] == prio_selection) priority_total += cost[i];
+            }
+by starting with zero, we dont need to think of adding or subtract 1 during the loop since they all start with 0.
+
+
+3.
+think of array as a parking lot, each position in array is a parking spot, and the data stored in the array is 
+the car parking in the parking spot, if you want to accessing an element in the array, it's the same that you go to 
+the desired parking spot and see what car is parking in there, and there can be no car parking there too.
